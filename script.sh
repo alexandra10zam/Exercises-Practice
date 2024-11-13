@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 read -p "What is your name?: " name
 if [ -z "$name" ]; then
