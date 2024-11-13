@@ -1,8 +1,13 @@
 stages:
   - build
+  - test
 
 build_job:
   stage: build
   script:
     - chmod +x script.sh
     - ./script.sh
+test_job:
+  stage: test
+  script:
+    - echo "Test"
