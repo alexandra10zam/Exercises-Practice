@@ -8,7 +8,6 @@ fi
 if [ ! -d "$bck" ]; then
   mkdir "$bck"
 fi
-
 txt_files=("$folder"/*.txt)
 if [ -e "${txt_files[0]}" ]; then
 
