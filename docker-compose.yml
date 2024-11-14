@@ -1,0 +1,17 @@
+services:
+  flask-app:
+    build:
+      context: .
+      dockerfile: Dockerfile  # Build from your existing Dockerfile
+    ports:
+      - "5001:5002"         # Expose Flask app on port 5000
+    depends_on:
+      - redis               # Flask app depends on Redis service
+    environment:
+      - FLASK_ENV=development  # Set environment variables (optional)
+
+  redis:
+    image: "redis:alpine"     # Use the official Redis image from Docker Hub
+    ports:
+      - "6379:6379"           # Expose Redis on port 6379
+    restart: always           # Automatically restart Redis if it stops
